@@ -26,7 +26,11 @@
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  html { scroll-behavior: smooth; }
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
 
   body {
     background: linear-gradient(180deg, var(--bg), var(--bg2));
@@ -35,6 +39,8 @@
     font-size: 16px;
     line-height: 1.6;
     overflow-x: hidden;
+    max-width: 100vw;
+    min-width: 100vw;
     cursor: auto;
   }
 
@@ -1467,7 +1473,7 @@
       position: fixed;
       top: 72px;
       right: 0;
-      width: min(260px, 80%);
+      width: min(260px, 80vw);
       height: calc(100vh - 72px);
       padding: 2rem 1.75rem;
       flex-direction: column;
